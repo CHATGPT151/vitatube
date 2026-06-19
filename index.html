@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>VitaTube Hub</title>
+    <style>
+        body { background: #000; color: #fff; font-family: sans-serif; padding: 20px; }
+        .box { background: #222; padding: 15px; margin-bottom: 10px; border-radius: 8px; }
+        input { width: 80%; padding: 10px; border: none; border-radius: 4px; }
+        button { padding: 10px; background: #e62117; color: #fff; border: none; border-radius: 4px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <h2>VitaTube Personal</h2>
+    <div class="box">
+        <input type="text" id="query" placeholder="Cari video...">
+        <button onclick="search()">Cari</button>
+    </div>
+    <script>
+        function search() {
+            var q = document.getElementById('query').value;
+            window.location.href = 'https://piped.kavin.rocks/results?search_query=' + encodeURIComponent(q);
+        }
+    </script>
+</body>
+</html>
